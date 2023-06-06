@@ -5,7 +5,7 @@ const Posts = () => {
 
     const fetchPosts = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/posts', {
+            const response = await fetch('https://codejays-backend.onrender.com/api/posts', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
