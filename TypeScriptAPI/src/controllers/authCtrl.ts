@@ -99,7 +99,7 @@ const authCtrl ={
                     res.status(500).json({ message: 'Failed to read images directory' });
                 } else {
                     const images = imageFiles.map((fileName) => ({
-                        imageUrl: `http://localhost:3000/images/${fileName}`,
+                        imageUrl: `https://codejays-backend.onrender.com/images/${fileName}`,
                     }));
                     res.status(201).json({ images });
                 }
