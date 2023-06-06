@@ -20,7 +20,13 @@ const dbPassword = process.env.DB_PASSWORD
 
 const sequelizeConnection = new Sequelize(dbName, dbUser, dbPassword, {
   host: dbHost,
-  dialect: 'postgres'
+  dialect: 'postgres',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
 });
 
 const connectPostgres = async () => {
